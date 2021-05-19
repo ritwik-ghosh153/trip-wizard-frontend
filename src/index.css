@@ -1,13 +1,200 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+header{
+  padding: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
+  color: whitesmoke;
+  background-color: rgb(52, 88, 119);
+  /* background-color: rgb(56, 75, 129); */
+}
+.place-input{
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  overflow: auto;
+  margin: 0px auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 500px;
+  border: 1px solid black;
+}
+.output{
+}
+.form-check-input{
+  padding: 0px;
+}
+.form-check-label{
+  padding: 5px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.city {
+  margin: 20px;
+}
+
+.day {
+  margin: 20px;
+}
+
+.place {
+  margin-left: 20px;
+}
+
+.vl {
+  border-left: 2px solid lightgray;
+  height: 25px;
+}
+
+.itinerary{
+  margin-left: 30px;
+}
+
+.button {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* .map{
+  max-width: 700px;
+  max-height: 200px;
+} */
+
+.right-panel{
+  margin-right: 30px;
+}
+
+.place-details{
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: auto;
+  padding: 20px;
+  max-width: 400px;
+  max-height: 500px;
+  border: 1px solid black;
+}
+
+.place-data{
+  margin-top: 10px;
+}
+
+/* .place-categories{
+  margin-bottom: 5px;
+} */
+.upper{
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/03/Panorama_vom_Gornergrat-Zermatt.jpg");
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+}
+hr{
+  border:none;
+ 	width: 80%;
+	height: 50px;
+	margin-top: 0;
+	border-bottom: 1px solid #1f1209;
+	box-shadow: 0 20px 20px -20px #333;
+  margin: -50px auto 10px; 
+}
+.divider{
+  width: 97%;
+  border-bottom: 1px solid #1f1209;
+	box-shadow: 0 20px 20px -20px #333;
+  height: 50px;
+  border:none;
+  margin-top: -40px;
+  margin-bottom: 23px;
+}
+
+.overlay{
+  position: fixed;
+	width: 100%;
+	height: 100%;
+  background: rgba(0,0,0,0.5);
+  visibility: hidden;
+}
+.spanner{
+  position:absolute;
+  top: 50%;
+  left: 0;
+  background: #2a2a2a55;
+  width: 100%;
+  display:block;
+  text-align:center;
+  height: 300px;
+  color: #FFF;
+  transform: translateY(-50%);
+  z-index: 1000;
+  visibility: hidden;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.loader {
+  color: #ffffff;
+  font-size: 10px;
+  margin: 80px auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 3.5em;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+
+.show{
+  visibility: visible;
+}
+
+.spanner, .overlay{
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.spanner.show, .overlay.show {
+	opacity: 1
 }
