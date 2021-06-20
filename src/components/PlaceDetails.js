@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-const OTMKEY='5ae2e3f221c38a28845f05b646e1344b7601d109be32a7f5a3d7b817'
+const OTMKEY='Replace with your own key from OTM'
 const placeUrl = 'https://api.opentripmap.com/0.1/en/places/xid/'
 const PlaceDetails = ({xid}) => {
 
